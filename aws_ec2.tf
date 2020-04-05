@@ -24,7 +24,11 @@ resource "aws_instance" "terraform-vpc-meetup-ec2" {
     instance_type = "t2.micro"
 
     key_name = "terraform-vpc-meetup-ec2"
+
     vpc_security_group_ids = [aws_security_group.terraform-vpc-meetup.id]
+
+    user_data = file("install.sh")
+
     tags = {
         Owner = "terraform-vpc-meetup"
         Project = "aws-cloud-automation"
