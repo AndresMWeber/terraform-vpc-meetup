@@ -7,6 +7,6 @@ resource "aws_s3_bucket_object" "terraform-vpc-meetup-bucket-object" {
 
     tags = {
         Owner = "terraform-vpc-meetup"
-        Project = "terraform-vpc-meetup"
+        Project = "aws-cloud-automation"
     }
 }
